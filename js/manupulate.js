@@ -40,3 +40,16 @@ for (const card of cards) {
     card.style.borderRadius = '30px';
 }
 
+function btnClicked() {
+    console.log('button clicked');
+}
+
+document.getElementById('user-email').addEventListener('keyup', function (event) {
+    const element = event.target;
+    if (element.value === 'email') {
+        document.getElementById('btn-submit').removeAttribute('disabled');
+    }
+    else {
+        document.getElementById('btn-submit').setAttribute('disabled', true);
+    }
+});
